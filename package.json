@@ -1,0 +1,11 @@
+{
+  "name": "startup2",
+  "version": "1.0.0",
+  "description": "A project to hold basic file and configuration to start devlopment new project  with node and react",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
