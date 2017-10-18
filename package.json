@@ -18,6 +18,10 @@
   },
   "author": "Evgi",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/evgi99/startup2.git"
+  },
   "dependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
