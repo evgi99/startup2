@@ -1,6 +1,6 @@
 ## what is this ?
 
-A project to hold basic file and configuration to start devlopment new project  with node and react
+A project to hold basic files and configuration to start devlopment new project  with node and react.js
 
 ## Cool, how i join??
 

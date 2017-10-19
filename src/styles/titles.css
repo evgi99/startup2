@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Segoe-Light';
+    src: local('SegoeUI Light'), local('Segoe-Light'), url('../fonts/segoeuisl.ttf');
+}
+
+.main-title {
+    font: 40pt "SegoeUI Light","Segoe-Light", sans-serif;
+    text-align: center;
+    background: rgb(205, 242, 239);
+}
+

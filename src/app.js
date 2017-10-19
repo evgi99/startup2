@@ -3,12 +3,15 @@
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'styles/titles.css'
 
 export default class App extends React.Component {
     render () {
         return (
             <div>
-                something from react 2
+                <p className="main-title">
+                    Startup Project
+                </p>
             </div>
         )
     }
