@@ -1,0 +1,38 @@
+#stars-frame, #answer-frame, #numbers-frame {
+    width: 40%;
+    float: left;
+}
+
+#button-frame {
+    width: 20%;
+    float: left;
+    text-align: center;
+    margin-top: 50px;
+}
+
+#stars-frame .well{
+    height: 150px;
+    background-color: #48cedd;
+    border-radius: 0.2em;
+}
+
+#answer-frame .well {
+    height: 150px;
+}
+
+#numbers-frame .number, #answer-frame .well .number {
+    display: inline-block;
+    /*margin: 0.25em;*/
+    background-color: #bbb;
+    width: calc(100%/20);
+    text-align: center;
+    font-size: 1.75em;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#numbers-frame .selected-true {
+    background-color: #e8e8e8;
+    color: #ddd;
+    cursor: not-allowed;
+}
