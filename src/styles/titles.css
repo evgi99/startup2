@@ -4,8 +4,12 @@
 }
 
 .main-title {
+    padding: 15px;
     font: 40pt "SegoeUI Light","Segoe-Light", sans-serif;
     text-align: center;
     background: rgb(205, 242, 239);
+}
+.tab {
+    width: calc(100% / 3);
 }
 

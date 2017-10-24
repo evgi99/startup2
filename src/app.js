@@ -4,15 +4,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'styles/titles.css'
+import Mytabs from "./Template/Tabs";
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
 
 export default class App extends React.Component {
     render () {
         return (
-            <div>
-                <p className="main-title">
-                    Startup Project
-                </p>
-            </div>
+            <MuiThemeProvider>
+                <div>
+                    <div className="main-title">
+                        Startup Project
+                    </div>
+                    <Mytabs/>
+                </div>
+            </MuiThemeProvider>
         )
     }
 }
