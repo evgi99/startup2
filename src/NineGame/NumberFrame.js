@@ -16,16 +16,16 @@ export default class NumbersFrame extends React.Component{
             return alreadySelected.indexOf(i) >= 0 ;
         }
         for (var i = 1; i < 10; i++) {
-            var className2 = "number selected-" +  (isAlreadyUsed(i) || isAlreadySelected(i));
+            var tmpClassName = "number selected-" +  (isAlreadyUsed(i) || isAlreadySelected(i));
             numbers.push(
-                <div key={i} className={className2} onClick={onClickLocalFunction.bind(null,i)}>{i}</div>
+                <div key={i} className="wall">
+                     <div className={tmpClassName} onClick={onClickLocalFunction.bind(null,i)}>{i}</div>
+                </div>
             );
         }
         return (
             <div id="numbers-frame">
-                <div className="well">
-                    {numbers}
-                </div>
+                {numbers}
             </div>
         )
     }

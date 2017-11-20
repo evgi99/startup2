@@ -8,6 +8,7 @@ import ActionHome from 'material-ui/svg-icons/action/home'
 import VideogameAsset from 'material-ui/svg-icons/hardware/videogame-asset'
 import ViewList from 'material-ui/svg-icons/action/view-list'
 import Game from '../NineGame/Game'
+import MyTable from '../TableTab/MyTable'
 
 
 export default class Tabs extends React.Component {
@@ -24,15 +25,15 @@ export default class Tabs extends React.Component {
                             <RaisedButton buttonStyle={{borderRadius: 0}} style={{borderRadius: 0}}
                                           className="tab" label="Tab 1" primary = {true} icon={<ViewList  />}/>
                         </Link>
-                        <Link to="/tab2">
+                        <Link to="/ninegame">
                             <RaisedButton buttonStyle={{borderRadius: 0}} style={{borderRadius: 0}}
                                           className="tab" label="Nine Game" primary = {true} icon={<VideogameAsset/>}/>
                         </Link>
                     </div>
 
                     <Route path="/home" component={() => (<div> home </div>)}/>
-                    <Route path="/tab1" component={() => (<div> tab1 </div>)}/>
-                    <Route path="/tab2" component={Game}/>
+                    <Route path="/tab1" component={MyTable}/>
+                    <Route path="/ninegame" component={Game}/>
                     {/*<Route path="/" exact to="/home" />*/}
                     <Route path="/" exact component={() => (<div> home </div>)}/>
                 </div>

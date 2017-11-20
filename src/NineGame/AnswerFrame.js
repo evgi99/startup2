@@ -11,15 +11,15 @@ export default class AnswerFrame extends React.Component{
 
         alreadySelected.forEach(function (selected) {
             numbers.push(
-                <div key={selected} className="number" onClick={unselectFunction.bind(null,selected)}>{selected}</div>
+                <div key={selected} className="well">
+                    <div className="number" onClick={unselectFunction.bind(null,selected)}>{selected}</div>
+                </div>
             )
         });
 
         return (
             <div id="answer-frame">
-                <div className="well">
-                    {numbers}
-                </div>
+                {numbers}
             </div>
         )
     }

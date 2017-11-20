@@ -1,38 +1,77 @@
-#stars-frame, #answer-frame, #numbers-frame {
-    width: 40%;
-    float: left;
-}
-
-#button-frame {
-    width: 20%;
-    float: left;
-    text-align: center;
-    margin-top: 50px;
-}
-
-#stars-frame .well{
-    height: 150px;
+#stars-frame {
+    align-items: center;
+    height: 120px;
+    display: flex;
+    width: 50%;
+    margin: 5px auto;
     background-color: #48cedd;
     border-radius: 0.2em;
 }
 
-#answer-frame .well {
-    height: 150px;
+#stars-frame .wall {
+    margin: auto;
+    text-align: center;
+    width: calc(100%/9);
 }
 
-#numbers-frame .number, #answer-frame .well .number {
-    display: inline-block;
-    /*margin: 0.25em;*/
-    background-color: #bbb;
-    width: calc(100%/20);
+.gameheart {
+    margin: 5px auto;
     text-align: center;
-    font-size: 1.75em;
+    width: 50%;
+}
+
+#numbers-frame{
+    display: flex;
+    float: left;
+    width: 49.5%;
+    background-color: #c0dcdd;
+    border-radius: 0.2em;
+    height: 100px;
+}
+
+#answer-frame {
+    display: flex;
+    float: right;
+    width: 49.5%;
+    background-color: #c0dcdd;
+    border-radius: 0.2em;
+    height: 100px;
+}
+
+#numbers-frame .wall ,#answer-frame .well {
+    margin: auto;
+    text-align: center;
+    width: calc(100%/9);
+}
+
+#numbers-frame .wall .number ,#answer-frame .well .number{
+    margin: 5px;
+    background-color: #bbb;
     border-radius: 50%;
+    font-size: 1.75em;
     cursor: pointer;
 }
 
-#numbers-frame .selected-true {
+#numbers-frame .wall .selected-true {
     background-color: #e8e8e8;
     color: #ddd;
     cursor: not-allowed;
+}
+
+#button-frame {
+    align-items: center;
+    height: 50px;
+    display: flex;
+    width: 50%;
+    margin: 5px auto;
+    border-radius: 0.2em;
+    text-align: center;
+}
+#button-frame .main-button {
+    margin: auto;
+    text-align: center;
+}
+
+.refreshbutton {
+    margin: 5px auto;
 }

@@ -13,24 +13,26 @@ export default class ButtonsFrame extends React.Component{
         var isalreadySelected = this.props.property3.length == 0;
         var isCorrect = this.props.isCorrect;
         var button;
+        var mainButton = "main-button"
         switch (isCorrect) {
             case true:
                 button = (
-                    <RaisedButton onClick={this.props.acceptAnswerFunction}
-                                  primary = {true} icon={<Accept/>}
-                    />
+                    <RaisedButton className={mainButton}
+                                  onClick={this.props.acceptAnswerFunction}
+                                  primary = {true} icon={<Accept/>}/>
                 )
                 break;
             case false:
                 button = (
-                    <RaisedButton secondary={true}
-                                  icon={<Error/>}
-                    />
+                    <RaisedButton className={mainButton}
+                                  secondary={true}
+                                  disabled={true}
+                                  icon={<Error/>}/>
                 )
                 break;
             default:
                 button = (
-                    <RaisedButton disabled={isalreadySelected}
+                    <RaisedButton className={mainButton} disabled={isalreadySelected}
                                   label="="
                                   onClick ={this.props.afterClick}/>
                 )
@@ -39,11 +41,8 @@ export default class ButtonsFrame extends React.Component{
         return (
             <div id="button-frame">
                 {button}
-
-                <br/><br/>
-                <RaisedButton onClick ={this.props.refreshGame}
-                              icon={<Autorenew/>}/>
-
+                {/*<RaisedButton onClick ={this.props.refreshGame}*/}
+                              {/*icon={<Autorenew/>}/>*/}
             </div>
         )
     }

@@ -7,6 +7,9 @@ import ButtonsFrame from './/ButtonsFrame'
 import StarsFrame from './/StarsFrame'
 import NumbersFrame from './/NumberFrame'
 import AnswerFrame from './/AnswerFrame'
+
+import RaisedButton from 'material-ui/RaisedButton';
+import Autorenew from 'material-ui/svg-icons/action/autorenew'
 import '../styles/nineGameStyle.css'
 
 export default class Game extends React.Component{
@@ -71,20 +74,25 @@ export default class Game extends React.Component{
             <div id="game">
                 <h2>Play nine</h2>
                 <Divider/>
-                <div className="clearfix">
-                    <StarsFrame numberOfStars1 = {this.state.numberOfStars}/>
-                    <ButtonsFrame property3 = {selectedNumbers}
-                                  isCorrect = {this.state.correct}
-                                  afterClick={this.clickOnEqual}
-                                  acceptAnswerFunction = {this.acceptAnswer}
-                                  refreshGame = {this.refreshGame}/>
+                <RaisedButton className="refreshbutton"
+                              onClick ={this.refreshGame}
+                              icon={<Autorenew/>}/>
+                <StarsFrame numberOfStars1 = {this.state.numberOfStars}/>
+                <div className="gameheart">
+                    <NumbersFrame property2={selectedNumbers}
+                                  clickNumber = {this.clickOnNumber}
+                                  alreadyUsed = {this.state.alradyUsedNumbers}/>
+
                     <AnswerFrame property1={selectedNumbers}
                                  clickWrongAnswer = {this.clickOnNumberInAnswerFrame.bind(this)}/>
                 </div>
+                <ButtonsFrame property3 = {selectedNumbers}
+                              isCorrect = {this.state.correct}
+                              afterClick={this.clickOnEqual}
+                              acceptAnswerFunction = {this.acceptAnswer}
+                              refreshGame = {this.refreshGame}/>
 
-                <NumbersFrame property2={selectedNumbers}
-                              clickNumber = {this.clickOnNumber}
-                              alreadyUsed = {this.state.alradyUsedNumbers}/>
+
             </div>
         )
     }
