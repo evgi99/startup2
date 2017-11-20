@@ -72,6 +72,10 @@
     text-align: center;
 }
 
-.refreshbutton {
+.refreshbutton-frame {
     margin: 5px auto;
+}
+
+.game-title {
+    font: 15pt "SegoeUI Light","Segoe-Light", sans-serif;
 }

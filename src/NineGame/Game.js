@@ -72,11 +72,13 @@ export default class Game extends React.Component{
         var selectedNumbers = this.state.selectedNumbers;
         return (
             <div id="game">
-                <h2>Play nine</h2>
+                <h2 className="game-title">Play nine</h2>
                 <Divider/>
-                <RaisedButton className="refreshbutton"
+                <div className="refreshbutton-frame">
+                    <RaisedButton
                               onClick ={this.refreshGame}
                               icon={<Autorenew/>}/>
+                </div>
                 <StarsFrame numberOfStars1 = {this.state.numberOfStars}/>
                 <div className="gameheart">
                     <NumbersFrame property2={selectedNumbers}
